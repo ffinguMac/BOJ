@@ -3,14 +3,14 @@ using namespace std;
 
 int d(int num)
 {
-	int self_num = num;
+	int check_num = num;
 	while (num)
 	{
-		self_num += num % 10;
+		check_num += num % 10;
 		num /= 10;
 	}
 	
-	return self_num;
+	return check_num;
 }
 int main(void)
 {
@@ -18,9 +18,9 @@ int main(void)
 
 	for (int i = 1; i <= 10000; i++)
 	{
-		int self_num = d(i);
-		if (self_num <= 10000)
-			tab[self_num]++;
+		int num = d(i);
+		if (num <= 10000)
+			tab[num]++;
 	}
 	for (int i = 1; i <= 10000; i++)
 		if (tab[i] == 0)
