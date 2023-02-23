@@ -2,19 +2,19 @@
 #include <string>
 using namespace std;
 
-int main()
+int main(void)
 {
-	string plate;
-	int plate_len = 10;
-	cin >> plate;
-	for (int i = 0; i < plate.size(); i++)
-	{
-		if ((plate[i] == ')' && plate[i + 1] == '(') || (plate[i] == '(' && plate[i + 1] == ')') && i + 1 < plate.size())
-			plate_len += 10;
-		else if ((plate[i] == ')' && plate[i + 1] == ')') || (plate[i] == '(' && plate[i + 1] == '(') && i + 1 < plate.size())
-			plate_len += 5;
-	}
-	cout << plate_len;
+    int hight = 10;
+    string str;
+    cin >> str;
 
-	return 0;
+    for (int i = 1; i < str.size(); i++) {
+        if (str[i - 1] == str[i])
+            hight += 5;
+        else
+            hight += 10;
+    }
+    cout << hight;
+
+    return 0;
 }
