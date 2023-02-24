@@ -9,13 +9,19 @@ int iterative_factorial(int n)
 
 	return res;
 }
-int 
+int recursive_factorial(int n)
+{
+	if (n == 1 || n == 0)
+		return 1;
+	else
+		return recursive_factorial(n - 1) * n;
+}
 int main(void)
 {
 	int N, K;
 	cin >> N >> K;
 
-	int res = iterative_factorial(N) / (iterative_factorial(K) * iterative_factorial(N - K));
+	int res = iterative_factorial(N) / (recursive_factorial(K) * recursive_factorial(N - K));
 	cout << res;
 
 	return 0;
