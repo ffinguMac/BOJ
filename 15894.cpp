@@ -3,9 +3,9 @@ using namespace std;
 
 int main(void)
 {
-	unsigned int n;
-	cin >> n;
-	cout << 4 * n;
-
-	return 0;
+  unsigned int n;
+  cin >> n;
+  cout << 4 * n;
+  
+  return 0;
 }
