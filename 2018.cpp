@@ -14,7 +14,7 @@ int main(void)
         cnt++;
         break;
       }
-      else if (N < (i * j + (j + 1) * j / 2))
+      else if (N < (i * j + (j - 1) * j / 2))
         break;
     }
   }
