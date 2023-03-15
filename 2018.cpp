@@ -1,23 +1,24 @@
 #include <iostream>
 using namespace std;
+
 int main(void)
 {
-	int n, cnt = 0;
-	cin >> n;
-	for (int i = 1; i<=n;i++)
+	int N, cnt = 0;
+	cin >> N;
+	for (int i = 1; i <= N; i++)
 	{
-		for (int j = 1; j <= n; j++)
+		for (int j = 1; j <= N; j++)
 		{
-			if (n == (i * j + (j - 1)*j / 2))
+			if (N == (i * j + (j - 1) * j / 2))
 			{
 				cnt++;
 				break;
 			}
-			else if (n < (i*j + (j + 1)*j / 2))
+			else if (N < (i * j + (j + 1) * j / 2))
 				break;
 		}
 	}
 	cout << cnt;
-    
-    return 0;
+
+	return 0;
 }
