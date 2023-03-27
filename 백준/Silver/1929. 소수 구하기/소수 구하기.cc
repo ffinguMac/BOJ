@@ -19,10 +19,8 @@ int main(void)
   cin >> M >> N;
 
   for (int num = M; num <= N; num++)
-  {
     if (is_prime(num) == 1)
       cout << num << '\n';
-  }
 
   return 0;
 }
