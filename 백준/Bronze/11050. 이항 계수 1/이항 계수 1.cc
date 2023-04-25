@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int factorial(int n)
+int iterative_factorial(int n)
 {
 	int res = 1;
 	for (int i = 1; i <= n; i++)
@@ -9,12 +9,19 @@ int factorial(int n)
 
 	return res;
 }
+int recursive_factorial(int n)
+{
+	if (n == 1 || n == 0)
+		return 1;
+	else
+		return recursive_factorial(n - 1) * n;
+}
 int main(void)
 {
-	int N, K;
-	cin >> N >> K;
+	int n, K;
+	cin >> n >> K;
 
-	int res = factorial(N) / (factorial(K) * factorial(N - K));
+	int res = iterative_factorial(n) / (recursive_factorial(K) * recursive_factorial(n - K));
 	cout << res;
 
 	return 0;
