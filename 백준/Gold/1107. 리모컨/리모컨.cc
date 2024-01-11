@@ -26,8 +26,7 @@ int main() {
     cin >> x;
     arr[x] = 1;
   }
-  int ans = n - 100;
-  if (ans < 0) ans = -ans;
+  int ans = abs(n - 100);
 
   for (int i = 0; i <= 10000000; i++) {
     int c = i;
