@@ -1,4 +1,4 @@
-# 🚀 BOJ Algorithm Study Repository
+# 🚀 Algorithm Study Repository
 
 백준 온라인 저지와 프로그래머스에서 풀이한 알고리즘 문제들을 정리한 레포지토리입니다.
 
